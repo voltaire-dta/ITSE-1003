@@ -1,0 +1,11 @@
+#include <stdio.h>
+ 
+int main() {
+	// add two integers, divide by the third, and print the answer
+	int x = 5;
+	int y = 15;
+	int z = 10;
+	int a = (x+y)/z;
+	printf("When you add %d and %d, then divide it by %d, you get %d!",x,y,z,a);
+return 0;
+}
