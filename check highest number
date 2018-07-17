@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+	// find the highest of 3 numbers
+	int number1;
+	int number2;
+	int number3;
+	printf("enter 3 numbers. I will tell you which is the greatest\n");
+	scanf("%d", &number1);
+	scanf("%d", &number2);
+	scanf("%d", &number3);
+	printf("1st Number = %d\n 2nd Number = %d\n 3rd Number = %d\n", number1, number2, number3);
+	if(number1 > number2&& number1>number3) {
+		printf("%d Is the highest among the 3", number1);
+	}
+	else if(number2 > number1&& number2>number3) {
+	printf("%d Is the highest among the 3", number2);
+	}
+	else {
+		printf("%d Is the highest among the 3", number3);	
+	}
+	return 0;
+}
