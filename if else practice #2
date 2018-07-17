@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+	// testing if else loops with age entry
+	int age;
+	printf("Enter Your Age, Please.\n");
+	scanf("%d", &age);
+	
+	if(age==60) {
+		printf("senior citizen!");
+	}
+	else if(age<60&&age>20) {
+		printf("not a senior citizen");
+	}
+	else if(age<21) {
+		printf("underage");
+	}
+	else {
+		printf("definitely senior citizen");
+	}
+	return 0;
+}
