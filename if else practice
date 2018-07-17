@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+	// testing if else loops
+	int number1;
+	int number2;
+	printf("Enter Two Whole Numbers, Please.\n");
+	scanf("%d%d", &number1, &number2);
+	
+	if(number1 == number2){
+		printf("Number1 is equal to Number2");
+	}
+		if(number1 < number2){
+		printf("%d is less than %d", number1, number2);
+	}
+			if(number1 > number2){
+		printf("%d is greater than %d", number1, number2);
+	}
+	return 0;
+}
