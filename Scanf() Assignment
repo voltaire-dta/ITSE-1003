@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+	// write a program that asks the user for an integer, a character and a floating point number,
+	//and prints the variables to the screen
+	int x;
+	char y[20];
+	float z;
+	printf("Please enter an integer, a character, and a floating point number!\n");
+	scanf("%d", &x);
+	printf("Integer: %d\n", x);
+	scanf("%s", y);
+	printf("Character: %s\n", y);
+	scanf("%f", &z);
+	printf("Floating Point: %f\n ", z);
+	return 0;
+}
