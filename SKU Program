@@ -1,0 +1,54 @@
+#include <stdio.h>
+
+main() {
+
+    int choice;
+    int i, item;
+    int sku[] = { 2156, 4633, 3122, 5611};
+    double price[] = {12.34, 7.89, 6.56, 9.32};
+    const int n = 4;
+    choice = get_menu_choice();
+
+    while(choice != 3) {
+        if(choice == 1) {
+            printf("You chose Menu Option %d\n", choice );
+            printf("SKU : ");
+            scanf("%d", &item);
+            i = find(sku, n, item);
+            if (i >= 0 && i < n) {
+                printf("Price : $%0.2lf\n", price[i]);
+            } else {
+                printf("%d not in system\n", item);
+            }
+        }
+        if (choice == 2) {
+            printf("Not yet supported");
+        }
+        choice = get_menu_choice();
+    }
+    printf("Ending Program");
+}
+
+int get_menu_choice(void) {
+    int selection = 0;
+    do {
+        printf("\n" );
+        printf("\n1 - Find Price" );
+        printf("\n2 - Find SKU");
+        printf("\n3 - Quit");
+        printf("\n" );
+        printf("\nEnter a selection: " );
+        scanf("%d", &selection );
+    } while ( selection < 1 || selection > 3 );
+    return selection;
+}
+
+int find(int a[], int n, int item) {
+    int i, rc = -1;
+    for (i = 0; i < n; i++)
+        if (item == a[i]) {
+            rc = i; // save the index i = n;
+            // stop the iteration
+        }
+    return rc;
+}
